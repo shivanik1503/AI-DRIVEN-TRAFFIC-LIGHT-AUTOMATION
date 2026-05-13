@@ -1,0 +1,181 @@
+#include <16F877A.h>
+
+#use delay  (clock=20000000)
+
+void main()
+{
+      int i,j;
+      
+       int32 time;
+       output_high(PIN_C3);  
+      
+       output_high(PIN_D4);     
+       output_high(PIN_D5);   
+       output_high(PIN_D6);     
+       output_high(PIN_D7);   
+       output_high(PIN_C7);     
+       output_high(PIN_C6);     
+       output_high(PIN_B0);     
+       output_high(PIN_B1);     
+       output_high(PIN_B2);     
+       output_high(PIN_B3);     
+       output_high(PIN_B4);     
+       output_high(PIN_B5);     
+       delay_ms(500);   
+       
+       output_low(PIN_C3);  
+       
+       output_low(PIN_D4);     
+       output_low(PIN_D5);   
+       output_low(PIN_D6);     
+       output_low(PIN_D7);   
+       output_low(PIN_C7);     
+       output_low(PIN_C6);     
+       output_low(PIN_B0);     
+       output_low(PIN_B1);     
+       output_low(PIN_B2);     
+       output_low(PIN_B3);     
+       output_low(PIN_B4);     
+       output_low(PIN_B5);     
+       delay_ms(500);   
+              
+       output_high(PIN_C3); 
+       
+       output_high(PIN_D4);     
+       output_high(PIN_D5);   
+       output_high(PIN_D6);     
+       output_high(PIN_D7);   
+       output_high(PIN_C7);     
+       output_high(PIN_C6);     
+       output_high(PIN_B0);     
+       output_high(PIN_B1);     
+       output_high(PIN_B2);     
+       output_high(PIN_B3);     
+       output_high(PIN_B4);     
+       output_high(PIN_B5);     
+       delay_ms(500);   
+              
+       output_low(PIN_C3);  
+       
+       output_low(PIN_D4);     
+       output_low(PIN_D5);   
+       output_low(PIN_D6);     
+       output_low(PIN_D7);   
+       output_low(PIN_C7);     
+       output_low(PIN_C6);     
+       output_low(PIN_B0);     
+       output_low(PIN_B1);     
+       output_low(PIN_B2);     
+       output_low(PIN_B3);     
+       output_low(PIN_B4);     
+       output_low(PIN_B5);   
+              
+      while(1)
+      {    
+        
+          output_high(PIN_C7);       //Orange
+          delay_ms(1000);
+          output_low(PIN_C7);       //Orange
+          
+          output_high(PIN_C6);      //red          
+          output_low(PIN_D4);       //green
+          
+          output_high(PIN_D5);      //red
+          output_low(PIN_D6);       //Orange
+          output_low(PIN_D7);       //green
+          
+          output_high(PIN_B0);      //red
+          output_low(PIN_B1);       //Orange
+          output_low(PIN_B2);       //green
+          
+          output_low(PIN_B3);      //red
+          output_low(PIN_B4);       //Orange
+          output_high(PIN_B5);       //green
+          
+          if(input(PIN_A2))
+          {
+            delay_ms(9000);
+            output_high(PIN_C2);
+            output_low(PIN_C1);
+            output_low(PIN_C0);
+          }
+          else if(input(PIN_A1))
+          {
+            delay_ms(6000);
+            output_high(PIN_C1);
+            output_low(PIN_C0);
+            output_low(PIN_C2);
+          }
+          else if(input(PIN_A0))
+          {
+            delay_ms(3000);
+            output_high(PIN_C0);
+            output_low(PIN_C1);
+            output_low(PIN_C2);
+          }        
+          
+          output_high(PIN_B4);       //Orange
+          delay_ms(1000);
+          output_low(PIN_B4);       //Orange
+          
+          output_high(PIN_B3);      //red
+          output_low(PIN_B5);       //green
+          
+          output_high(PIN_C6);      //red
+          output_low(PIN_C7);       //Orange
+          output_low(PIN_D4);       //green
+          
+          output_high(PIN_D5);      //red
+          output_low(PIN_D6);       //Orange
+          output_low(PIN_D7);       //green
+          
+          output_low(PIN_B0);      //red
+          output_low(PIN_B1);       //Orange
+          output_high(PIN_B2);       //green
+          
+          delay_ms(3000);
+          
+         
+          output_high(PIN_B1);       //Orange
+          delay_ms(1000);
+          output_low(PIN_B1);       //Orange
+          
+          output_high(PIN_B0);      //red          
+          output_low(PIN_B2);       //green
+          
+          output_high(PIN_C6);      //red
+          output_low(PIN_C7);       //Orange
+          output_low(PIN_D4);       //green
+          
+          output_low(PIN_D5);      //red
+          output_low(PIN_D6);       //Orange
+          output_high(PIN_D7);       //green
+                    
+          output_high(PIN_B3);      //red
+          output_low(PIN_B4);       //Orange
+          output_low(PIN_B5);       //green
+                    
+          delay_ms(3000);
+                            
+          output_high(PIN_D6);       //Orange
+          delay_ms(1000);
+          output_low(PIN_D6);       //Orange
+          
+          output_high(PIN_D5);      //red
+          output_low(PIN_D7);       //green
+          
+          output_low(PIN_C6);      //red
+          output_low(PIN_C7);       //Orange
+          output_high(PIN_D4);       //green
+                    
+          output_high(PIN_B0);      //red
+          output_low(PIN_B1);       //Orange
+          output_low(PIN_B2);       //green
+          
+          output_high(PIN_B3);      //red
+          output_low(PIN_B4);       //Orange
+          output_low(PIN_B5);       //green
+          
+          delay_ms(3000);
+      }
+}
